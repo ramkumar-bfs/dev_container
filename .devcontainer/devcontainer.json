@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Rocky 8 Dev Container",
+	// Use Docker Compose files
+	"dockerComposeFile": [
+		"..\\compose\\base.yml",
+		"..\\compose\\rocky8.yml",
+		"..\\compose\\dev.override.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/home/pipeline/development",
+	"remoteUser": "pipeline"
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	// Configure tool-specific properties.
+	// "customizations": {
+	// 	"vscode": {
+	// 		"extensions": []
+	// }
+	// }
+}

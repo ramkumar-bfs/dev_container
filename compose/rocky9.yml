@@ -1,0 +1,9 @@
+services:
+  app:
+    image: rocky9-dev:latest # Use the Rocky 9 dev image
+    volumes:
+      - "${HOST_DEPENDENCIES}/rocky-9:/system_dependencies" # Mount system dependencies
+    environment:
+      - EASYBUILD_PREFIX=/apps/portable_application/rocky-9
+      - EASYBUILD_MODULES_TOOL=Lmod
+      - MODULEPATH=/apps/portable_application/rocky-9/modules
